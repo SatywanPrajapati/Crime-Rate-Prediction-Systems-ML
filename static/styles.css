@@ -1,0 +1,150 @@
+/* General styles */
+body {
+    font-family: 'Lora', serif;
+    background-color: #1c1c1c;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #ff4c4c;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header styles */
+header {
+    background-color: #2b2b2b;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #ff4c4c;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: 700;
+    color: #ff4c4c;
+    margin: 0;
+}
+
+.tagline {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #cccccc;
+    margin-top: 5px;
+}
+
+/* Section styles */
+section {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(255, 76, 76, 0.4);
+}
+
+/* Form table styles */
+.table1, .table2, .table3 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table1 td, .table2 td, .table3 td {
+    padding: 12px 15px;
+    border: 1px solid #444;
+}
+
+.label {
+    font-weight: 600;
+    color: #ff4c4c;
+    width: 40%;
+    background-color: #3a3a3a;
+}
+
+.sel {
+    width: 60%;
+    background-color: #1c1c1c;
+}
+
+.sel select {
+    width: 100%;
+    padding: 8px;
+    background-color: #333;
+    border: 1px solid #555;
+    color: #e0e0e0;
+    font-size: 1em;
+    border-radius: 4px;
+    outline: none;
+}
+
+.sel select:hover, .sel select:focus {
+    border-color: #ff4c4c;
+}
+
+/* Button styles */
+.button, .button2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn {
+    background-color: #ff4c4c;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e04343;
+}
+
+/* Prediction result styles */
+.result {
+    font-weight: 600;
+    color: #e0e0e0;
+    background-color: #3a3a3a;
+    text-align: center;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2b2b2b;
+    padding: 15px 0;
+    text-align: center;
+    color: #777;
+    font-size: 0.9em;
+    border-top: 2px solid #ff4c4c;
+    margin-top: 40px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    section {
+        margin: 15px;
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 2em;
+    }
+
+    .tagline {
+        font-size: 1em;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
