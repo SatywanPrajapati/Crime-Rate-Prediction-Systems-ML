@@ -24,12 +24,12 @@ https://crime-rate-prediction-system-ml.onrender.com
 ---
 
 ##   Key Features
-- 🔹 Predicts crime rate using Machine Learning  
-- 🔹 Provides estimated number of cases and population  
-- 🔹 Displays risk level (Low / Medium / High)  
-- 🔹 Supports multiple districts and crime categories  
-- 🔹 Clean and responsive user interface  
-- 🔹 Built using real-world SCRB dataset  
+-  Predicts crime rate using Machine Learning  
+-  Provides estimated number of cases and population  
+-  Displays risk level (Low / Medium / High)  
+-  Supports multiple districts and crime categories  
+-  Clean and responsive user interface  
+-  Built using real-world SCRB dataset  
 
 ---
 
