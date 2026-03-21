@@ -1,31 +1,36 @@
-/* General styles */
+/* ================= GENERAL ================= */
+
 body {
     font-family: 'Lora', serif;
     background-color: #1c1c1c;
     color: #e0e0e0;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 a {
     color: #ff4c4c;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-/* Header styles */
+
+/* ================= HEADER ================= */
+
 header {
     background-color: #2b2b2b;
-    padding: 20px 0;
+    padding: 25px 0;
     text-align: center;
     border-bottom: 2px solid #ff4c4c;
 }
 
 .title {
-    font-size: 3em;
+    font-size: 2.8em;
     font-weight: 700;
     color: #ff4c4c;
     margin: 0;
@@ -33,29 +38,36 @@ header {
 
 .tagline {
     font-size: 1.2em;
-    font-weight: 400;
     color: #cccccc;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
-/* Section styles */
+
+/* ================= SECTION ================= */
+
 section {
     max-width: 900px;
     margin: 30px auto;
-    padding: 20px;
+    padding: 25px;
     background-color: #2b2b2b;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(255, 76, 76, 0.4);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 76, 76, 0.3);
 }
 
-/* Form table styles */
-.table1, .table2, .table3 {
+
+/* ================= TABLE ================= */
+
+.table1,
+.table2,
+.table3 {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
 }
 
-.table1 td, .table2 td, .table3 td {
+.table1 td,
+.table2 td,
+.table3 td {
     padding: 12px 15px;
     border: 1px solid #444;
 }
@@ -72,44 +84,56 @@ section {
     background-color: #1c1c1c;
 }
 
+
+/* Dropdown */
+
 .sel select {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     background-color: #333;
     border: 1px solid #555;
     color: #e0e0e0;
     font-size: 1em;
-    border-radius: 4px;
+    border-radius: 6px;
     outline: none;
+    transition: 0.3s;
 }
 
-.sel select:hover, .sel select:focus {
+.sel select:hover,
+.sel select:focus {
     border-color: #ff4c4c;
 }
 
-/* Button styles */
-.button, .button2 {
+
+/* ================= BUTTON ================= */
+
+.button,
+.button2 {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .btn {
     background-color: #ff4c4c;
     color: #fff;
     border: none;
-    padding: 12px 30px;
+    padding: 12px 35px;
     font-size: 1.1em;
     font-weight: 700;
-    border-radius: 6px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     background-color: #e04343;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 76, 76, 0.4);
 }
 
-/* Prediction result styles */
+
+/* ================= RESULT ================= */
+
 .result {
     font-weight: 600;
     color: #e0e0e0;
@@ -117,34 +141,48 @@ section {
     text-align: center;
 }
 
-/* Footer styles */
-footer {
+
+/* ================= FOOTER ================= */
+
+.footer {
     background-color: #2b2b2b;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
-    color: #777;
-    font-size: 0.9em;
     border-top: 2px solid #ff4c4c;
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
-/* Responsive */
-@media (max-width: 600px) {
-    section {
-        margin: 15px;
-        padding: 15px;
-    }
+.footer p {
+    color: #ffffff;
+    font-size: 15px;
+    margin-top: 10px;
+}
 
-    .title {
-        font-size: 2em;
-    }
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-    .tagline {
-        font-size: 1em;
-    }
+.footer a:hover {
+    color: #ff4c4c;
+}
 
-    .btn {
-        width: 100%;
-        padding: 12px 0;
-    }
+
+/* ================= SOCIAL ICONS ================= */
+
+.social-icons {
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 12px;
+    font-size: 24px;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff4c4c;
+    transform: scale(1.2);
 }

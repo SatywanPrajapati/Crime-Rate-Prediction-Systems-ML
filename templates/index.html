@@ -5,132 +5,143 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crime Rate Prediction</title>
-    <link rel="icon" href="static/images/favicon.png" type="image/png">
 
-    <link rel="stylesheet" href="static/styles.css">
+    <!-- SEO -->
+    <title>Crime Rate Prediction System | Machine Learning Project</title>
+    <meta name="description" content="Machine Learning based Crime Rate Prediction System using Random Forest. Predict crime trends across districts, analyze crime patterns, and improve public safety planning.">
+    <meta name=" author " content="Satywan Prajapati ">
+
+    <!-- CSS -->
+    <link rel="stylesheet " href="{{ url_for( 'static', filename='styles.css' ) }} ">
+
+    <!-- Google Font -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
     </style>
+
+    <!-- Font Awesome (icons) -->
+    <link rel="stylesheet " href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css ">
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
-        <h1 class="title">Crime Rate Prediction</h1>
-        <h2 class="tagline">Unlock safety: Reduce crime rate together</h2>
+        <h1 class="title ">Crime Rate Prediction</h1>
+        <h2 class="tagline ">Unlock safety: Reduce crime rate together</h2>
     </header>
 
-    <section class="section1">
-        <form action="/predict" method="POST">
-            <table class="table1">
+    <!-- FORM SECTION -->
+    <section class="section1 ">
+        <form action="/predict " method="POST ">
+            <table class="table1 ">
+
                 <tr>
-                    <td class="label">
-                        <label>Select District Name</label>
-                    </td>
-                    <td class="sel">
-                        <select name="city">
-                            <option value="0">Araria</option>
-                            <option value="1">Arwal</option>
-                            <option value="2">Aurangabad</option>
-                            <option value="3">Banka</option>
-                            <option value="4">Begusarai</option>
-                            <option value="5">Bhagalpur</option>
-                            <option value="6">Bhojpur</option>
-                            <option value="7">Buxar</option>
-                            <option value="8">Darbhanga</option>
-                            <option value="9">East Champaran (Motihari)</option>
-                            <option value="10">Gaya</option>
-                            <option value="11">Gopalganj</option>
-                            <option value="12">Jamui</option>
-                            <option value="13">Jehanabad</option>
-                            <option value="14">Kaimur (Bhabua)</option>
-                            <option value="15">Katihar</option>
-                            <option value="16">Khagaria</option>
-                            <option value="17">Kishanganj</option>
-                            <option value="18">Lakhisarai</option>
-                            <option value="19">Madhepura</option>
-                            <option value="20">Madhubani</option>
-                            <option value="21">Munger</option>
-                            <option value="22">Muzaffarpur</option>
-                            <option value="23">Nalanda</option>
-                            <option value="24">Nawada</option>
-                            <option value="25">Patna</option>
-                            <option value="26">Purnia</option>
-                            <option value="27">Rohtas</option>
-                            <option value="28">Saharsa</option>
-                            <option value="29">Samastipur</option>
-                            <option value="30">Saran (Chhapra)</option>
-                            <option value="31">Sheikhpura</option>
-                            <option value="32">Sheohar</option>
-                            <option value="33">Sitamarhi</option>
-                            <option value="34">Siwan</option>
-                            <option value="35">Supaul</option>
-                            <option value="36">Vaishali (Hajipur)</option>
-                            <option value="37">West Champaran (Bettiah)</option>
+                    <td class="label ">Select District Name</td>
+                    <td class="sel ">
+                        <select name="city ">
+                            <option value="0 ">Araria</option>
+                            <option value="1 ">Arwal</option>
+                            <option value="2 ">Aurangabad</option>
+                            <option value="3 ">Banka</option>
+                            <option value="4 ">Begusarai</option>
+                            <option value="5 ">Bhagalpur</option>
+                            <option value="6 ">Bhojpur</option>
+                            <option value="7 ">Buxar</option>
+                            <option value="8 ">Darbhanga</option>
+                            <option value="9 ">East Champaran (Motihari)</option>
+                            <option value="10 ">Gaya</option>
+                            <option value="11 ">Gopalganj</option>
+                            <option value="12 ">Jamui</option>
+                            <option value="13 ">Jehanabad</option>
+                            <option value="14 ">Kaimur (Bhabua)</option>
+                            <option value="15 ">Katihar</option>
+                            <option value="16 ">Khagaria</option>
+                            <option value="17 ">Kishanganj</option>
+                            <option value="18 ">Lakhisarai</option>
+                            <option value="19 ">Madhepura</option>
+                            <option value="20 ">Madhubani</option>
+                            <option value="21 ">Munger</option>
+                            <option value="22 ">Muzaffarpur</option>
+                            <option value="23 ">Nalanda</option>
+                            <option value="24 ">Nawada</option>
+                            <option value="25 ">Patna</option>
+                            <option value="26 ">Purnia</option>
+                            <option value="27 ">Rohtas</option>
+                            <option value="28 ">Saharsa</option>
+                            <option value="29 ">Samastipur</option>
+                            <option value="30 ">Saran (Chhapra)</option>
+                            <option value="31 ">Sheikhpura</option>
+                            <option value="32 ">Sheohar</option>
+                            <option value="33 ">Sitamarhi</option>
+                            <option value="34 ">Siwan</option>
+                            <option value="35 ">Supaul</option>
+                            <option value="36 ">Vaishali (Hajipur)</option>
+                            <option value="37 ">West Champaran (Bettiah)</option>
                         </select>
                     </td>
                 </tr>
 
                 <tr>
-                    <td class="label">
-                        <label>Select Crime Type</label>
-                    </td>
-                    <td class="sel">
-                        <select name="crime">
-                            <option value="0">Attempt to Murder</option>
-                            <option value="1">Burglary</option>
-                            <option value="2">Cruelty by Husband/Relatives</option>
-                            <option value="3">Dacoity</option>
-                            <option value="4">Dowry Deaths</option>
-                            <option value="5">Kidnapping & Abduction</option>
-                            <option value="6">Murder </option>
-                            <option value="7">Rape </option>
-                            <option value="8">Riots </option>
-                            <option value="9">Robbery</option>
-                            <option value="10">Theft</option>
-                            <option value="11">Total Violent Crimes</option>
+                    <td class="label ">Select Crime Type</td>
+                    <td class="sel ">
+                        <select name="crime ">
+                            <option value="0 ">Attempt to Murder</option>
+                            <option value="1 ">Burglary</option>
+                            <option value="2 ">Cruelty by Husband/Relatives</option>
+                            <option value="3 ">Dacoity</option>
+                            <option value="4 ">Dowry Deaths</option>
+                            <option value="5 ">Kidnapping & Abduction</option>
+                            <option value="6 ">Murder</option>
+                            <option value="7 ">Rape</option>
+                            <option value="8 ">Riots</option>
+                            <option value="9 ">Robbery</option>
+                            <option value="10 ">Theft</option>
+                            <option value="11 ">Total Violent Crimes</option>
                         </select>
                     </td>
                 </tr>
 
                 <tr>
-                    <td class="label">
-                        <label>Select Crime Year</label>
-                    </td>
-                    <td class="sel">
-                        <select name="year" id="year-dropdown"></select>
+                    <td class="label ">Select Crime Year</td>
+                    <td class="sel ">
+                        <select name="year " id="year-dropdown "></select>
                     </td>
                 </tr>
+
             </table>
 
-            <div class="button">
-                <input type="submit" class="btn id=" predict_button "" value="Predict">
+            <div class="button ">
+                <input type="submit " class="btn " id="predict_button " value="Predict ">
             </div>
+
         </form>
     </section>
 
+    <!-- ABOUT SECTION -->
     <section>
-        <h2 id="about">About the Application</h2>
+        <h2>About the Application</h2>
 
-        <p id="introduction">
-            Crime rate prediction has become an important tool for law enforcement agencies to help them better understand patterns of crime and anticipate where crime is likely to occur. By predicting future crime trends, law enforcement agencies can better allocate
-            resources to areas that are likely to experience increases in criminal activity. This could lead to a decrease in crime overall, as well as an increase in public safety. Additionally, crime rate prediction can help police departments develop
-            better strategies for responding to crime as it happens.
-            <br> <br> The dataset is prepared manually based on the publication available on the Indian National Crime Rate Bureau (NCRB) and state crime Bureau (scrb) official website. This data provides statistics on crimes committed in 38 district
-            (cities) during the year 2018 to 2021. With the help of this application, we can predict the crime rates for 10 different categories of crime that are likely to occur in 19 Indian metropolitan cities over the next few years. It includes statistics
-            on 12 different categories of crime, including murder, kidnapping, crime against women, crime against children, crime committed by juveniles, crime against senior citizens, crime against SC, crime against ST, economic offences and cyber crimes.
-            <br><br> The system uses scikit-learn's Random Forest Regression model, which takes year, city name, and crime type data as inputs. Random Forest Regression is a type of an ensemble learning techniques that can be used to predict continuous
-            values from a collection of data. It works by creating a large number of "decision trees" which each make a prediction about the target variable. Then it averages all the predictions to come up with a final prediction. This makes it more accurate
-            than a single decision tree. The model predicts the crime rate with an accuracy of 90.00% on testing dataset.
-            <br><br> .
-            </a>
-        </p>
+        <ul>
+            <li>Machine Learning based crime prediction using Random Forest Regression (~90% accuracy)</li>
+            <li>Dataset sourced from NCRB & SCRB official reports</li>
+            <li>Supports multiple districts and crime categories</li>
+            <li>Input features: Year, District, Crime Type</li>
+            <li>End-to-end pipeline: Data preprocessing → Model training → Deployment</li>
+            <li>Live deployed using Flask and Render</li>
+            <li>Responsive UI with modern dark theme design</li>
+            <li>Useful for crime analysis, risk assessment, and safety planning</li>
+        </ul>
     </section>
 
-    <footer>
-        <div class="footer">
+    <!-- FOOTER -->
+    {% include 'footer.html' %}
 
-            <script src="static/main.js"></script>
+    <!-- JS -->
+    <script src="{{ url_for( 'static', filename='main.js' ) }} "></script>
+
 </body>
+
+</html>
 
 </html>

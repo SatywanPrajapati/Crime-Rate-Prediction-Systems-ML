@@ -5,85 +5,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crime Rate Prediction</title>
 
-    <link rel="stylesheet" href="static/styles.css">
+    <!-- SEO -->
+    <title>Crime Prediction Result | ML Project</title>
+    <meta name="description" content="View predicted crime rate results using Machine Learning. Analyze crime trends and insights based on selected district, crime type, and year.">
+    <meta name="author" content="Satywan Prajapati">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Google Font -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
     </style>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
+
+    <!-- HEADER -->
     <header>
-        <h1 class="title">Crime Rate Prediction </h1>
-        <h2 class="tagline">Unlock safety: Reduces crime rate together</h2>
+        <h1 class="title">Crime Rate Prediction</h1>
+        <h2 class="tagline">Unlock safety: Reduce crime rate together</h2>
     </header>
 
+    <!-- RESULT SECTION -->
     <section class="prediction">
+
+        <!-- Selected Inputs -->
         <table class="table2">
-            <tr class="r1">
-                <td class="label">
-                    <label>Selected District Name :</label>
-                </td>
-                <td class="sel">
-                    <select>
-                        <option value="selected">{{city_name}}</option>
-                </td>
+
+            <tr>
+                <td class="label">Selected District :</td>
+                <td class="sel"><span>{{ city_name }}</span></td>
             </tr>
-            <tr class="r1">
-                <td class="label">
-                    <label>Selected Crime Type :</label>
-                </td>
-                <td class="sel">
-                    <select >
-                        <option value="selected">{{crime_type}}</option>
-                </td>
+
+            <tr>
+                <td class="label">Crime Type :</td>
+                <td class="sel"><span>{{ crime_type }}</span></td>
             </tr>
-            <tr class="r1">
-                <td class="label">
-                    <label>Selected Year :</label>
-                </td>
-                <td class="sel">
-                    <select>
-                        <option value="selected">{{year}}</option>
-                </td>
+
+            <tr>
+                <td class="label">Year :</td>
+                <td class="sel"><span>{{ year }}</span></td>
             </tr>
+
         </table>
 
-        <table class="table3">         
-            
-            <tr class="r2""> 
+        <!-- Prediction Output -->
+        <table class="table3">
+
+            <tr>
                 <td class="result">Prediction :</td>
-                <td class="result">{{crime_status}}</td>
+                <td class="result">{{ crime_status }}</td>
             </tr>
-            <tr class="r2">
-                <td class="result">Estimated Crime Rate :</td>
-                <td class="result">{{crime_rate}}</td>
+
+            <tr>
+                <td class="result">Estimated Crime Rate (%) :</td>
+                <td class="result">{{ crime_rate }}</td>
             </tr>
-            <tr class="r2">
-                <td class="result">Estimated Number of Cases :</td>
-                <td class="result">{{cases}}</td>
+
+            <tr>
+                <td class="result">Estimated Cases :</td>
+                <td class="result">{{ cases }}</td>
             </tr>
-            <tr class="r2">
-                <td class="result">Population  :</td>
-                <td class="result">{{population}}</td>
+
+            <tr>
+                <td class="result">Population (in Lakh) :</td>
+                <td class="result">{{ population }}</td>
             </tr>
+
         </table>
 
-        <div class="button2" >
-            <a href="http://127.0.0.1:5000">
-                <input type="submit" class="btn id="check_again"" value="Let's Check Again" >
-            </a>            
-        </div> 
-        
+        <!-- Button -->
+        <div class="button2">
+            <a href="/">
+                <button class="btn" id="check_again">Check Again</button>
+            </a>
+        </div>
+
     </section>
 
-    <footer>
-        <div class="footer">
-            
-                </a>
-            </div>
-        </div>       
-    </footer>    
+    <!-- FOOTER -->
+    {% include 'footer.html' %}
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+
 </body>
+
 </html>
