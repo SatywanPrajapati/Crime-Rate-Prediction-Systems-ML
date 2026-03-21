@@ -12,7 +12,7 @@
     <meta name=" author " content="Satywan Prajapati ">
 
     <!-- CSS -->
-    <link rel="stylesheet " href="{{ url_for( 'static', filename='styles.css' ) }} ">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 
     <!-- Google Font -->
     <style>
@@ -33,86 +33,84 @@
 
     <!-- FORM SECTION -->
     <section class="section1 ">
-        <form action="/predict " method="POST ">
-            <table class="table1 ">
+        <form action="/predict" method="POST">
+            <table class="table1">
 
                 <tr>
-                    <td class="label ">Select District Name</td>
-                    <td class="sel ">
-                        <select name="city ">
-                            <option value="0 ">Araria</option>
-                            <option value="1 ">Arwal</option>
-                            <option value="2 ">Aurangabad</option>
-                            <option value="3 ">Banka</option>
-                            <option value="4 ">Begusarai</option>
-                            <option value="5 ">Bhagalpur</option>
-                            <option value="6 ">Bhojpur</option>
-                            <option value="7 ">Buxar</option>
-                            <option value="8 ">Darbhanga</option>
-                            <option value="9 ">East Champaran (Motihari)</option>
-                            <option value="10 ">Gaya</option>
-                            <option value="11 ">Gopalganj</option>
-                            <option value="12 ">Jamui</option>
-                            <option value="13 ">Jehanabad</option>
-                            <option value="14 ">Kaimur (Bhabua)</option>
-                            <option value="15 ">Katihar</option>
-                            <option value="16 ">Khagaria</option>
-                            <option value="17 ">Kishanganj</option>
-                            <option value="18 ">Lakhisarai</option>
-                            <option value="19 ">Madhepura</option>
-                            <option value="20 ">Madhubani</option>
-                            <option value="21 ">Munger</option>
-                            <option value="22 ">Muzaffarpur</option>
-                            <option value="23 ">Nalanda</option>
-                            <option value="24 ">Nawada</option>
-                            <option value="25 ">Patna</option>
-                            <option value="26 ">Purnia</option>
-                            <option value="27 ">Rohtas</option>
-                            <option value="28 ">Saharsa</option>
-                            <option value="29 ">Samastipur</option>
-                            <option value="30 ">Saran (Chhapra)</option>
-                            <option value="31 ">Sheikhpura</option>
-                            <option value="32 ">Sheohar</option>
-                            <option value="33 ">Sitamarhi</option>
-                            <option value="34 ">Siwan</option>
-                            <option value="35 ">Supaul</option>
-                            <option value="36 ">Vaishali (Hajipur)</option>
-                            <option value="37 ">West Champaran (Bettiah)</option>
+                    <td class="label">Select District Name</td>
+                    <td class="sel">
+                        <select name="city">
+                            <option value="0">Araria</option>
+                            <option value="1">Arwal</option>
+                            <option value="2">Aurangabad</option>
+                            <option value="3">Banka</option>
+                            <option value="4">Begusarai</option>
+                            <option value="5">Bhagalpur</option>
+                            <option value="6">Bhojpur</option>
+                            <option value="7">Buxar</option>
+                            <option value="8">Darbhanga</option>
+                            <option value="9">East Champaran (Motihari)</option>
+                            <option value="10">Gaya</option>
+                            <option value="11">Gopalganj</option>
+                            <option value="12">Jamui</option>
+                            <option value="13">Jehanabad</option>
+                            <option value="14">Kaimur (Bhabua)</option>
+                            <option value="15">Katihar</option>
+                            <option value="16">Khagaria</option>
+                            <option value="17">Kishanganj</option>
+                            <option value="18">Lakhisarai</option>
+                            <option value="19">Madhepura</option>
+                            <option value="20">Madhubani</option>
+                            <option value="21">Munger</option>
+                            <option value="22">Muzaffarpur</option>
+                            <option value="23">Nalanda</option>
+                            <option value="24">Nawada</option>
+                            <option value="25">Patna</option>
+                            <option value="26">Purnia</option>
+                            <option value="27">Rohtas</option>
+                            <option value="28">Saharsa</option>
+                            <option value="29">Samastipur</option>
+                            <option value="30">Saran (Chhapra)</option>
+                            <option value="31">Sheikhpura</option>
+                            <option value="32">Sheohar</option>
+                            <option value="33">Sitamarhi</option>
+                            <option value="34">Siwan</option>
+                            <option value="35">Supaul</option>
+                            <option value="36">Vaishali (Hajipur)</option>
+                            <option value="37">West Champaran (Bettiah)</option>
                         </select>
                     </td>
                 </tr>
 
                 <tr>
-                    <td class="label ">Select Crime Type</td>
-                    <td class="sel ">
-                        <select name="crime ">
-                            <option value="0 ">Attempt to Murder</option>
-                            <option value="1 ">Burglary</option>
-                            <option value="2 ">Cruelty by Husband/Relatives</option>
-                            <option value="3 ">Dacoity</option>
-                            <option value="4 ">Dowry Deaths</option>
-                            <option value="5 ">Kidnapping & Abduction</option>
-                            <option value="6 ">Murder</option>
-                            <option value="7 ">Rape</option>
-                            <option value="8 ">Riots</option>
-                            <option value="9 ">Robbery</option>
-                            <option value="10 ">Theft</option>
-                            <option value="11 ">Total Violent Crimes</option>
+                    <td class="label">Select Crime Type</td>
+                    <td class="sel">
+                        <select name="crime">
+                            <option value="0">Attempt to Murder</option>
+                            <option value="1">Burglary</option>
+                            <option value="2">Cruelty by Husband/Relatives</option>
+                            <option value="3">Dacoity</option>
+                            <option value="4">Dowry Deaths</option>
+                            <option value="5">Kidnapping & Abduction</option>
+                            <option value="6">Murder</option>
+                            <option value="7">Rape</option>
+                            <option value="8">Riots</option>
+                            <option value="9">Robbery</option>
+                            <option value="10">Theft</option>
+                            <option value="11">Total Violent Crimes</option>
                         </select>
                     </td>
                 </tr>
-
+                <!-- Year -->
                 <tr>
-                    <td class="label ">Select Crime Year</td>
-                    <td class="sel ">
-                        <select name="year " id="year-dropdown "></select>
+                    <td class="label">Select Crime Year</td>
+                    <td class="sel">
+                        <select name="year" id="year-dropdown"></select>
                     </td>
-                </tr>
-
             </table>
 
-            <div class="button ">
-                <input type="submit " class="btn " id="predict_button " value="Predict ">
+            <div class="button">
+                <input type="submit" class="btn" id="predict_button" value="Predict">
             </div>
 
         </form>
@@ -123,14 +121,20 @@
         <h2>About the Application</h2>
 
         <ul>
-            <li>Machine Learning based crime prediction using Random Forest Regression (~90% accuracy)</li>
-            <li>Dataset sourced from NCRB & SCRB official reports</li>
-            <li>Supports multiple districts and crime categories</li>
-            <li>Input features: Year, District, Crime Type</li>
-            <li>End-to-end pipeline: Data preprocessing → Model training → Deployment</li>
-            <li>Live deployed using Flask and Render</li>
-            <li>Responsive UI with modern dark theme design</li>
-            <li>Useful for crime analysis, risk assessment, and safety planning</li>
+            <li><strong>Model:</strong> Random Forest Regression trained on official SCRB crime dataset</li>
+
+            <li><strong>Inputs:</strong> Year, District, Crime Category</li>
+            <li><strong>Output:</strong> Predicted crime rate, estimated case count, and risk classification</li>
+
+            <li><strong>Data Pipeline:</strong> Data cleaning → Feature engineering → Model training → Deployment</li>
+
+            <li><strong>Evaluation:</strong> Cross-validation with consistent performance across districts</li>
+
+            <li><strong>Deployment:</strong> Flask-based web application deployed on cloud (Render)</li>
+
+            <li><strong>Scalability:</strong> Handles multiple districts and crime categories dynamically</li>
+
+            <li><strong>Use Case:</strong> Crime risk analysis, district comparison, and safety planning</li>
         </ul>
     </section>
 
@@ -138,7 +142,7 @@
     {% include 'footer.html' %}
 
     <!-- JS -->
-    <script src="{{ url_for( 'static', filename='main.js' ) }} "></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
 
 </body>
 

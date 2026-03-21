@@ -1,5 +1,6 @@
 // Crime Prediction App JS
 
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Populate Year Dropdown (index page only)

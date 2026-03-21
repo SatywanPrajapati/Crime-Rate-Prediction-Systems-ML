@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template 
+from flask import Flask, request, render_template, redirect, url_for
 import pickle
 import math
 import os
@@ -13,8 +13,10 @@ def index ():
     return render_template ("index.html") 
  
  
-@app.route ('/predict', methods =['POST']) 
+@app.route('/predict', methods=['GET', 'POST']) 
 def predict_result (): 
+    if request.method == 'GET':
+        return redirect(url_for('index'))
     
     city_names = {
         '0': 'Araria', '1': 'Arwal', '2': 'Aurangabad', '3': 'Banka', '4': 'Begusarai','5': 'Bhagalpur', '6': 'Bhojpur', '7': 'Buxar', '8': 'Darbhanga', '9': 'East Champaran (Motihari)','10': 'Gaya', '11': 'Gopalganj', '12': 'Jamui', '13': 'Jehanabad', '14': 'Kaimur (Bhabua)',
@@ -37,7 +39,7 @@ def predict_result ():
     pop = population[city_code] 
 
 
-    year_diff = int(year) - 2018;
+    year_diff = int(year) - 2018
     pop = pop + 0.01*year_diff*pop
 
     
@@ -58,7 +60,7 @@ def predict_result ():
     
     cases = math.ceil(crime_rate * pop)
     
-    return render_template('result.html', city_name=city_name, crime_type=crime_type, year=year, crime_status=crime_status, crime_rate=crime_rate, cases=cases, population=pop)
+    return render_template('result.html', city_name=city_name, crime_type=crime_type, year=year, crime_status=crime_status, crime_rate=f"{round(crime_rate, 2)} %", cases=cases, population=f"{round(pop, 2)} Lakh")
 
 if __name__ == '__main__':
     # app.run (debug = False, host='0.0.0.0', port=5000) 
