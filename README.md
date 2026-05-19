@@ -150,7 +150,7 @@ Crime_Rate_Prediction/
 ## Author
 
 **Satywan Prajapati**  
-🎓 IIT Patna | Data Science & ML Enthusiast  
+🎓 IIT Patna
 
 ---
 
